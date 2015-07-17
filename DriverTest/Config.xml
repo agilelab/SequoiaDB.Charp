@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestConfig>
+  <UserName>36402581</UserName>
+  <Password>sideteam</Password>
+
+  <Coord>
+    <Address>1426595184.dbaas.sequoialab.net:12760</Address>
+  </Coord>
+
+  <Catalog>
+    <Address>1426595184.dbaas.sequoialab.net:12760</Address>
+  </Catalog>
+
+  <Data>
+    <Address>1426595184.dbaas.sequoialab.net:12760</Address>
+  </Data>
+
+  <Groups>
+    <Group>
+      <GroupName>group1</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>11830</Port>
+          <DBPath>/opt/sequoiadb/database/data/11830</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+    <Group>
+      <GroupName>group2</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>41000</Port>
+          <DBPath>/opt/sequoiadb/database/data/41000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>42000</Port>
+          <DBPath>/opt/sequoiadb/database/data/42000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>43000</Port>
+          <DBPath>/opt/sequoiadb/database/data/43000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+    <Group>
+      <GroupName>group3</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>51000</Port>
+          <DBPath>/opt/sequoiadb/database/data/51000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>52000</Port>
+          <DBPath>/opt/sequoiadb/database/data/52000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>susetzb</HostName>
+          <Port>53000</Port>
+          <DBPath>/opt/sequoiadb/database/data/53000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+  </Groups>
+
+</TestConfig>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8" ?>
+<TestConfig>
+  <UserName></UserName>
+  <Password></Password>
+
+  <Coord>
+    <Address>192.168.30.161:50000</Address>
+  </Coord>
+
+  <Catalog>
+    <Address>192.168.30.161:30000</Address>
+  </Catalog>
+
+  <Data>
+    <Address>192.168.30.161:25100</Address>
+  </Data>
+
+  <Groups>
+    <Group>
+      <GroupName>group1</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>40000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/40000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+    <Group>
+      <GroupName>testgroup1</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>45000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/45000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>46000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/46000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>47000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/47000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+    <Group>
+      <GroupName>testgroup2</GroupName>
+      <Nodes>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>55000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/55000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>56000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/56000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+        <Node>
+          <HostName>rhel</HostName>
+          <Port>57000</Port>
+          <DBPath>/opt/sequoiadb/temp/data/57000</DBPath>
+          <DiagLevel>5</DiagLevel>
+        </Node>
+      </Nodes>
+    </Group>
+  </Groups>
+
+</TestConfig>
+-->  
+
