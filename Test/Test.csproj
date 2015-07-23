@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EAS.Data">
-      <HintPath>..\..\..\Health.Work\Kunlun.Health\publish\EAS.Data.dll</HintPath>
+      <HintPath>..\ref\EAS.Data.dll</HintPath>
     </Reference>
     <Reference Include="EAS.MicroKernel">
-      <HintPath>..\..\..\Health.Work\Kunlun.Health\publish\EAS.MicroKernel.dll</HintPath>
+      <HintPath>..\ref\EAS.MicroKernel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="DbEntities.cs" />
     <Compile Include="Generat\GBCode.Generator.cs" />
     <Compile Include="Generat\HFareDetail.Generator.cs" />

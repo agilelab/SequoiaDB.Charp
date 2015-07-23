@@ -157,18 +157,22 @@ namespace Test
         /// <param name="sdb"></param>
         static void TestLinq2(Sequoiadb sdb)
         {
-            //求集合空间。
+            ////create Sequoiadb
+            //Sequoiadb sdb = new Sequoiadb("192.168.23.57:50000");
+            //sdb.Connect("", "");
+
+            //GetCollecitonSpace。
             var cs = sdb.GetCollecitonSpace("dbo");
 
-            //求集合。
+            //GetCollection。
             var coll = cs.GetCollection<HFareDetail>();
 
-            //执行数据插入。
+            //insert from rdb。
             List<HFareDetail> vList =null;
             using (AgileHIS.Entities.DbEntities db = new AgileHIS.Entities.DbEntities())
             {
                 vList = db.HFareDetails.ToList();
-                //插入。
+                //insert。
                 foreach (var item in vList)
                 {
                     coll.Insert(item);
@@ -177,35 +181,35 @@ namespace Test
                 System.Console.ReadLine();
             }
 
-            //按条件修改某一条数据的几个属性值。
+            //update docuemnt by linq。
             var v1 = vList.FirstOrDefault();
             v1.Name = string.Empty;
             v1.Cash = decimal.Zero;
             coll.Update(v1, p => p.ID == v1.ID);
-            //按条件指量修改,指定某几个必，其他属性全部置空。
+            //update docuemnt by linq。
             coll.Update(p => new HFareDetail { Cash = decimal.Zero, Name = string.Empty, Price = decimal.Zero }, p => p.ChargeTime >DateTime.Now.AddDays(-1));
-            //依据条件删除
+            //delete by linq
             coll.Delete(p => p.ChargeTime > DateTime.Now.AddDays(-1));
 
-            //求Count
+            //get Count
             int count = coll.AsQueryable<HFareDetail>()
                 .Where(p => p.SourceID==0)
                 .Count();
 
-            //Linq查询Take\Skip。
+            //Linq query Take\Skip。
             var vList2 = coll.AsQueryable<HFareDetail>()
                 .Where(p => p.CreateTime > DateTime.Now.Date.AddMonths(-12))
                 .Skip(10).Take(1000)
                 .ToList();
             System.Console.WriteLine(string.Format("query {0} records", vList.Count));
 
-            //Linq查询过。
+            //Linq FirstOrDefault。
             var vFare = coll.AsQueryable<HFareDetail>()
                 .Where(p => p.CreateTime > DateTime.Now.Date.AddMonths(-12))
                 .FirstOrDefault();
             System.Console.WriteLine(vFare);
 
-            //Linq\聚合运算，目前因为测试驱动报错，暂未实现
+            //Linq aggregate，Not Implemented
             var sum = coll.AsQueryable<HFareDetail>()
                 .Where(p => p.CreateTime > DateTime.Now.Date.AddMonths(-12))
                 .Sum(p => p.Cash);
